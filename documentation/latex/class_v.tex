@@ -1,0 +1,142 @@
+\hypertarget{class_v}{}\doxysection{V Class Reference}
+\label{class_v}\index{V@{V}}
+
+
+Collaboration diagram for V\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_v_a058a30a501c2ff7e842642dc1b5c63a1}{V}} (int start, int end)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_v_a058a30a501c2ff7e842642dc1b5c63a1}{V\+::V}}. \end{DoxyCompactList}\item 
+int \& \mbox{\hyperlink{class_v_abf5c9da1137885281e9cff4d24881d7e}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_v_abf5c9da1137885281e9cff4d24881d7e}{V\+::operator \mbox{[}$\,$\mbox{]}}} overload. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_v_a6882a712370513dbd6f7f3d37b50fb96}{Myers\+Diff}} (const char a\mbox{[}$\,$\mbox{]}, int N, const char b\mbox{[}$\,$\mbox{]}, int M)
+\begin{DoxyCompactList}\small\item\em finds the first snake that reaches the end of both sequences \end{DoxyCompactList}\item 
+static std\+::tuple$<$ int, int, int, int, int $>$ \mbox{\hyperlink{class_v_aaf877f079196f17024e93617c36ce7e4}{Find\+Middle\+Snake}} (const char a\mbox{[}$\,$\mbox{]}, int N, const char b\mbox{[}$\,$\mbox{]}, int M)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_v_aaf877f079196f17024e93617c36ce7e4}{V\+::\+Find\+Middle\+Snake}}. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_v_a377e3eabfd5648ebe51f9dc80f4f972b}{SES}} (const char a\mbox{[}$\,$\mbox{]}, int N, const char b\mbox{[}$\,$\mbox{]}, int M, std\+::string $\ast$content)
+\begin{DoxyCompactList}\small\item\em Shortest Edit Script. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_v_a058a30a501c2ff7e842642dc1b5c63a1}\label{class_v_a058a30a501c2ff7e842642dc1b5c63a1}} 
+\index{V@{V}!V@{V}}
+\index{V@{V}!V@{V}}
+\doxysubsubsection{\texorpdfstring{V()}{V()}}
+{\footnotesize\ttfamily V\+::V (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_v_a058a30a501c2ff7e842642dc1b5c63a1}{V\+::V}}. 
+
+class to work with Myers diff algorithm 
+\begin{DoxyParams}{Parameters}
+{\em start} & x \\
+\hline
+{\em end} & y\\
+\hline
+\end{DoxyParams}
+This class is a realization of the basic greedy diff algorithm, as described by Eugene W. Myers File A and File B The diff algorithm takes two files as input. The first, usually older, one is file A, and the second one is file B. The algorithm generates instructions to turn file A into file B. Shortest Edit Script ( SES ) The algorithm finds the Shortest Edit Script that converts file A into file B. The SES contains only two types of commands\+: deletions from file A and insertions in file B. Longest Common Subsequence ( LCS ) Finding the SES is equivalent to finding the Longest Common Subsequence of the two files. The LCS is the longest list of characters that can be generated from both files by removing some characters. The LCS is distinct from the Longest Common Substring, which has to be contiguous. For any two files, there can be multiple LCSs. For example, given the sequences \char`\"{}\+ABC\char`\"{} and \char`\"{}\+ACB\char`\"{}, there are two LCSs of length 2\+: \char`\"{}\+AB\char`\"{} and \char`\"{}\+AC\char`\"{}. An LCS corresponds directly to an SES, so it is also true that there can be multiple SESs of the same length for any two files. The algorithm just returns the first LCS / SES that it finds, which therefore may not be unique.
+
+This \textquotesingle{}greedy\textquotesingle{} algorithm has complexity O( (N+M) D ) in both time and space. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_v_aaf877f079196f17024e93617c36ce7e4}\label{class_v_aaf877f079196f17024e93617c36ce7e4}} 
+\index{V@{V}!FindMiddleSnake@{FindMiddleSnake}}
+\index{FindMiddleSnake@{FindMiddleSnake}!V@{V}}
+\doxysubsubsection{\texorpdfstring{FindMiddleSnake()}{FindMiddleSnake()}}
+{\footnotesize\ttfamily std\+::tuple$<$ int, int, int, int, int $>$ V\+::\+Find\+Middle\+Snake (\begin{DoxyParamCaption}\item[{const char}]{a\mbox{[}$\,$\mbox{]},  }\item[{int}]{N,  }\item[{const char}]{b\mbox{[}$\,$\mbox{]},  }\item[{int}]{M }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\mbox{\hyperlink{class_v_aaf877f079196f17024e93617c36ce7e4}{V\+::\+Find\+Middle\+Snake}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & first file \\
+\hline
+{\em N} & size of first file \\
+\hline
+{\em b} & second file \\
+\hline
+{\em M} & size of second file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tuple for further operation of the algorithm
+\end{DoxyReturn}
+The data in \mbox{\hyperlink{class_v}{V}} only stores the latest end point for each k line. To find all the snakes that lead to the solution requires taking a snapshot of \mbox{\hyperlink{class_v}{V}} after each iteration of d and then working backwards from dsolution to 0. \mbox{\Hypertarget{class_v_a6882a712370513dbd6f7f3d37b50fb96}\label{class_v_a6882a712370513dbd6f7f3d37b50fb96}} 
+\index{V@{V}!MyersDiff@{MyersDiff}}
+\index{MyersDiff@{MyersDiff}!V@{V}}
+\doxysubsubsection{\texorpdfstring{MyersDiff()}{MyersDiff()}}
+{\footnotesize\ttfamily int V\+::\+Myers\+Diff (\begin{DoxyParamCaption}\item[{const char}]{a\mbox{[}$\,$\mbox{]},  }\item[{int}]{N,  }\item[{const char}]{b\mbox{[}$\,$\mbox{]},  }\item[{int}]{M }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+finds the first snake that reaches the end of both sequences 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & first file \\
+\hline
+{\em N} & size of first file \\
+\hline
+{\em b} & second file \\
+\hline
+{\em M} & size of second file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size of snake
+\end{DoxyReturn}
+Snake to be defined as a single deletion or insertion followed by zero or more diagonals The solution is the shortest path from the top-\/left corner to the bottom-\/right corner. You can always move one character horizontally or vertically. A horizontal ( right ) move represents a deletion from file A, and a vertical ( down ) move represents an insertion in file B. If there is a matched character, then you can also move diagonally, ending at the match. The solution(s) are the trace(s) that include the most diagonals. The LCS is the diagonals in the trace, and the SES is the horizontal and vertical moves in it. \mbox{\Hypertarget{class_v_abf5c9da1137885281e9cff4d24881d7e}\label{class_v_abf5c9da1137885281e9cff4d24881d7e}} 
+\index{V@{V}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!V@{V}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily int \& V\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_v_abf5c9da1137885281e9cff4d24881d7e}{V\+::operator \mbox{[}$\,$\mbox{]}}} overload. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & element index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the value corresponding to the element index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_v_a377e3eabfd5648ebe51f9dc80f4f972b}\label{class_v_a377e3eabfd5648ebe51f9dc80f4f972b}} 
+\index{V@{V}!SES@{SES}}
+\index{SES@{SES}!V@{V}}
+\doxysubsubsection{\texorpdfstring{SES()}{SES()}}
+{\footnotesize\ttfamily void V\+::\+SES (\begin{DoxyParamCaption}\item[{const char}]{a\mbox{[}$\,$\mbox{]},  }\item[{int}]{N,  }\item[{const char}]{b\mbox{[}$\,$\mbox{]},  }\item[{int}]{M,  }\item[{std\+::string $\ast$}]{content }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Shortest Edit Script. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & first file \\
+\hline
+{\em N} & size of first file \\
+\hline
+{\em b} & second file \\
+\hline
+{\em M} & size of second file \\
+\hline
+{\em content} & string that stores additions and deletions\\
+\hline
+\end{DoxyParams}
+The algorithm finds the Shortest Edit Script that converts file A into file B. The SES contains only two types of commands\+: deletions from file A and insertions in file B. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/my\+Programming\+Playground/\+Global\+Logic Basecamp/2/roman-\/zinkiv/\+Text\+\_\+compare\+\_\+application/v.\+h\item 
+D\+:/my\+Programming\+Playground/\+Global\+Logic Basecamp/2/roman-\/zinkiv/\+Text\+\_\+compare\+\_\+application/v.\+cpp\end{DoxyCompactItemize}

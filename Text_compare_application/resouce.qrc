@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>styles/King Yna.qss</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,22 @@
+\hypertarget{class_comparison_widget}{}\doxysection{Comparison\+Widget Class Reference}
+\label{class_comparison_widget}\index{ComparisonWidget@{ComparisonWidget}}
+
+
+Inheritance diagram for Comparison\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Comparison\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_comparison_widget_a294766fcb5a493331a5a00f0abfba239}\label{class_comparison_widget_a294766fcb5a493331a5a00f0abfba239}} 
+{\bfseries Comparison\+Widget} (QWidget $\ast$parent=nullptr)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/my\+Programming\+Playground/\+Global\+Logic Basecamp/2/roman-\/zinkiv/\+Text\+\_\+compare\+\_\+application/comparisonwidget.\+h\item 
+D\+:/my\+Programming\+Playground/\+Global\+Logic Basecamp/2/roman-\/zinkiv/\+Text\+\_\+compare\+\_\+application/comparisonwidget.\+cpp\end{DoxyCompactItemize}

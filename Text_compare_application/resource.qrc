@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>styles/Deep Space.qss</file>
+        <file>styles/King Yna.qss</file>
+        <file>styles/Ukraine.qss</file>
+    </qresource>
+</RCC>

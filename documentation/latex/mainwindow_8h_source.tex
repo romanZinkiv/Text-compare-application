@@ -1,0 +1,53 @@
+\hypertarget{mainwindow_8h_source}{}\doxysection{mainwindow.\+h}
+\label{mainwindow_8h_source}\index{D:/myProgrammingPlayground/GlobalLogic Basecamp/2/roman-\/zinkiv/Text\_compare\_application/mainwindow.h@{D:/myProgrammingPlayground/GlobalLogic Basecamp/2/roman-\/zinkiv/Text\_compare\_application/mainwindow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MAINWINDOW\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MAINWINDOW\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}fileworker.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QPainter>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QSettings>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QFile>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QFileDialog>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <QTextStream>}}
+\DoxyCodeLine{11 \textcolor{comment}{//\#include <QMessageBox>}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{14 \textcolor{keyword}{namespace }Ui \{ \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}}; \}}
+\DoxyCodeLine{15 QT\_END\_NAMESPACE}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}} : \textcolor{keyword}{public} QMainWindow}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19     Q\_OBJECT}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_main_window}{MainWindow}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_main_window}{\string~MainWindow}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} on\_actionKing\_Yna\_triggered();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} on\_actionDeep\_Space\_triggered();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} on\_actionUkraine\_triggered();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} on\_compareButton\_clicked();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} on\_chooseFileButton1\_clicked();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} on\_chooseFileButton2\_clicked();}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{keyword}{private}:}
+\DoxyCodeLine{41     Ui::MainWindow *ui;}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} saveSettings();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} loadSettings();}
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MAINWINDOW\_H}}
+
+\end{DoxyCode}
